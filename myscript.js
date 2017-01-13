@@ -71,3 +71,18 @@ aHorse = new Horse;
 aHorse.gender = "Female";
 aHorse.speak('Neigh');
 
+//////////////////////////
+//
+// Call and Apply 
+//
+/////////////////////////
+
+var cry = function (tears) {
+    console.log(tears);
+    console.log(this.love);
+};
+
+var cryOut = { normal: "meow", love: "purr" };
+
+cry.call(cryOut, cryOut.normal);
+//cry.apply(cryOut, ['meouff']);
