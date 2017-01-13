@@ -21,6 +21,13 @@ var calc = {
 };
 calc.plus(10, 10);
 
+
+///////////////////////////////
+//
+// Constructor
+//
+//////////////////////////////
+
 // Using a function as a constructor
 var Dog = function () {
     var name, breed;
@@ -35,3 +42,32 @@ aDog.breed = "Poodle";
 
 // now we get the vals back
 console.log(aDog.name);
+
+
+
+
+/////////////////////////////
+//
+// Prototype
+//
+/////////////////////////////
+
+//Constructor
+var Horse = function () {
+  var gender, age;  
+};
+
+// function
+var speak = function (saywhat) {
+  console.log(saywhat);  
+};
+
+// Expand our Horse functionality, add speak() to Horse Obj
+// i.e Inherite the function speak()
+Horse.prototype.speak = speak;
+
+aHorse = new Horse;
+
+aHorse.gender = "Female";
+aHorse.speak('Neigh');
+
