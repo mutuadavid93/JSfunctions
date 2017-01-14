@@ -1,3 +1,9 @@
+//////////////////////////////
+//
+// Declaring a Function
+//
+/////////////////////////////
+
 
 // Traditional way
 function addition(a, b){
@@ -101,15 +107,17 @@ cry.call(cryOut, cryOut.normal);
     console.log('Foolish');
 })();
 
-////////////////////////////
+////////////////////////////////
 //
 // namespacing modules
+// and chaining function calls
 //
-///////////////////////////
+///////////////////////////////
 
 var dave = (function () {
     var DEFAULTS = {
-      say: 'Good Morning'  
+      say: 'good morning',
+      speed: 'normal'
     };
     
     return {
@@ -120,6 +128,16 @@ var dave = (function () {
           // set default val
           var statement = myArgs.say || DEFAULTS.say;
             console.log(statement);
-        }  
+            
+            return this;  
+        }, 
+        
+        run: function () {
+            var myArgs = arguments[0] || '';
+            var running = myArgs.speed || DEFAULTS.speed;
+            console.log('running...'+running);
+            
+            return this;
+        }
     };
 })();

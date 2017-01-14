@@ -7,7 +7,7 @@
     <body>
         <script type="text/javascript" src="myscript.js"></script>
         <script> 
-            dave.speak({ say: 'Hello there?' });
+            dave.speak({ say: 'Hello there?' }).run().run({ speed: 'faster' });
         </script>
     </body>
 </html>
