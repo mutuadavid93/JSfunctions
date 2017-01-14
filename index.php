@@ -6,5 +6,8 @@
     </head>
     <body>
         <script type="text/javascript" src="myscript.js"></script>
+        <script> 
+            dave.speak({ say: 'Hello there?' });
+        </script>
     </body>
 </html>

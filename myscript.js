@@ -100,3 +100,26 @@ cry.call(cryOut, cryOut.normal);
 (function() {
     console.log('Foolish');
 })();
+
+////////////////////////////
+//
+// namespacing modules
+//
+///////////////////////////
+
+var dave = (function () {
+    var DEFAULTS = {
+      say: 'Good Morning'  
+    };
+    
+    return {
+      speak: function () {
+          // Prevent errors
+          var myArgs = arguments[0] || '';
+          
+          // set default val
+          var statement = myArgs.say || DEFAULTS.say;
+            console.log(statement);
+        }  
+    };
+})();
