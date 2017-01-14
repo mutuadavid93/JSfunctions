@@ -86,3 +86,17 @@ var cryOut = { normal: "meow", love: "purr" };
 
 cry.call(cryOut, cryOut.normal);
 //cry.apply(cryOut, ['meouff']);
+
+
+
+//////////////////////////////
+// 
+// Anonymous closure
+//
+/////////////////////////////
+
+// vars are closed inside the func and 
+// not accessible outside it.
+(function() {
+    console.log('Foolish');
+})();
